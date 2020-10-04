@@ -6,8 +6,6 @@
   </head>
   <body>
 
-    <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>-->
-
     <header>
       <nav>
         <a>
@@ -27,165 +25,171 @@
 
       <img src="img" width="1200" height="217" alt="Размытое нечто">
       
-      <h1>Параметры поиска</h1>
+      <h1 class="visually-hidden">Параметры поиска</h1>
       
       <section>
-      
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
-        <ul>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="swimming-pool" id="filter-swimming-pool"
-            checked>
-            <label for="filter-swimming-pool">бассейн</label>
-          </li>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="parking" id="filter-parking">
-            <label for="filter-parking">парковка</label>
-          </li>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="wi-fi" id="filter-wi-fi">
-            <label for="filter-wi-fi">wi-fi</label>
-          </li>
-      </ul>
-        </fieldset>
-          <fieldset>
-            <legend>Тип жилья:</legend>
-        <ul>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="hotel" id="filter-hotel"
-            checked>
-            <label for="filter-hotel">Гостиница</label>
-          </li>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="motel" id="filter-motel"
-            checked>
-            <label for="filter-motel">Мотель</label>
-          </li>
-          <li>
-            <!--Чекбокс-->
-            <input type="checkbox" name="apartments" id="filter-apartments"
-            checked>
-            <label for="filter-apartments">Апартаменты</label>
-          </li>
-        </ul>
-      </fieldset>
+
+      <h2 class="visually-hidden">Форма с выбором оказываемых услуг</h2>
+
+      <form action="https://echo.htmlacademy.ru" method="GET">
         <fieldset>
-        <legend>Стоимость в сутки (Р):</legend>
-      от 0 <input type="range" id="cost-per-day" name="cost-per-day" min="0" max="3000" step="1"> до 3000
-      
-      </fieldset>
-      
-      <button type="submit">Показать</button>
-      
-      
-      </form>
-      </section>
-      
-      
-      <section>
-      <h2>Результаты поиска</h2>
-      
-      <p>Найдено:3</p>
-      <h4>Сортировка:</h4>
+          <legend>Инфраструктура:</legend>
       <ul>
         <li>
-          <p>По цене<p>
-          <!--<button type="button" disabled>По цене</button>-->
+          <!--Чекбокс-->
+          <input type="checkbox" name="swimming-pool" id="filter-swimming-pool"
+          checked>
+          <label for="filter-swimming-pool">бассейн</label>
         </li>
         <li>
-          <p>По типу<p>
-          <!--<button type="button" disabled>По типу</button>-->
+          <!--Чекбокс-->
+          <input type="checkbox" name="parking" id="filter-parking">
+          <label for="filter-parking">парковка</label>
         </li>
         <li>
-          <p>По рейтингу<p>
-          <!--<button type="button" disabled>По рейтингу</button>-->
+          <!--Чекбокс-->
+          <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+          <label for="filter-wi-fi">wi-fi</label>
+        </li>
+    </ul>
+      </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+      <ul>
+        <li>
+          <!--Чекбокс-->
+          <input type="checkbox" name="hotel" id="filter-hotel"
+          checked>
+          <label for="filter-hotel">Гостиница</label>
+        </li>
+        <li>
+          <!--Чекбокс-->
+          <input type="checkbox" name="motel" id="filter-motel"
+          checked>
+          <label for="filter-motel">Мотель</label>
+        </li>
+        <li>
+          <!--Чекбокс-->
+          <input type="checkbox" name="apartments" id="filter-apartments"
+          checked>
+          <label for="filter-apartments">Апартаменты</label>
         </li>
       </ul>
-      <img src="img" width="11" height="10" alt="Сортировать по возрастанию">
-      <img src="img" width="11" height="10" alt="Сортировать по убыванию">
-      </section>
+    </fieldset>
+      <fieldset>
+      <legend>Стоимость в сутки (Р):</legend>
+    от 0 <input type="range" id="cost-per-day" name="cost-per-day" min="0" max="3000" step="1"> до 3000
+    
+    </fieldset>
+    
+    <button type="submit">Показать</button>
+    
+    
+    </form>
+    </section>
       
-      <div>
-        <p>Amara Resort & Spa</p>
-        <p>Гостиница</p>
-        <p>От 4000 Р.</p>
-        <button type="button" disabled>Подробнее</button>
-        <button type="button" disabled>Забронировать</button>
-        <!-- Звездочки рейтинга -->
-        <p>Рейтинг: 8,5</p>
-        <img src="img" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-      </div>
+      <!-- Вполне можем сделать здесь header, так как содержимое этого блока является шапкой для апартаментов -->
+      <header>
+        <h2 class="visually-hidden">Результаты поиска</h2>
+        
+        <span>Найдено:3</span>
+        <span>Сортировка:</span>
+        <ul>
+          <li>
+            <a href="">По цене</a>
+            <!--<button type="button" disabled>По цене</button>-->
+          </li>
+          <li>
+            <a href="">По типу</a>
+            <!--<button type="button" disabled>По типу</button>-->
+          </li>
+          <li>
+            <a href="">По рейтингу</a>
+            <!--<button type="button" disabled>По рейтингу</button>-->
+          </li>
+        </ul>
+        <div>
+          <button type="button"></button>
+          <button type="button"></button>
+        </div>
+        <!-- <img src="img" width="11" height="10" alt="Сортировать по возрастанию">
+        <img src="img" width="11" height="10" alt="Сортировать по убыванию"> -->
+      </header>
       
-      <div>
-        <p>Desert Quail Inn</p>
-        <p>Мотель</p>
-        <p>От 3000 Р.</p>
-        <button type="button" disabled>Подробнее</button>
-        <button type="button" disabled>Забронировать</button>
-        <!-- Звездочки рейтинга -->
-        <p>Рейтинг: 8,9</p>
-        <img src="img" width="135" height="90" alt="Мотель Desert Quail Inn">
-      </div>
-      
-      <div>
-        <p>Villas at Poco Diablo</p>
-        <p>Апартаменты</p>
-        <p>От 2000 Р.</p>
-        <button type="button" disabled>Подробнее</button>
-        <button type="button" disabled>Забронировать</button>
-        <!-- Звездочки рейтинга -->
-        <p>Рейтинг: 9,2</p>
-        <img src="img" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-      </div>
-      
+      <ul>
+        <li>
+          <p>Amara Resort & Spa</p>
+          <p>Гостиница</p>
+          <p>От 4000 Р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button" disabled>Забронировать</button>
+          <!-- Звездочки рейтинга -->
+          <p>Рейтинг: 8,5</p>
+          <img src="img" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+        </li>
+
+        <li>
+          <p>Desert Quail Inn</p>
+          <p>Мотель</p>
+          <p>От 3000 Р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button" disabled>Забронировать</button>
+          <!-- Звездочки рейтинга -->
+          <p>Рейтинг: 8,9</p>
+          <img src="img" width="135" height="90" alt="Мотель Desert Quail Inn">
+        </li>
+
+        <li>
+          <p>Villas at Poco Diablo</p>
+          <p>Апартаменты</p>
+          <p>От 2000 Р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button" disabled>Забронировать</button>
+          <!-- Звездочки рейтинга -->
+          <p>Рейтинг: 9,2</p>
+          <img src="img" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+        </li>
+      </ul>
     </main>
 
 
 
-     <footer>
+    <footer>
       <div>
-       <h2 class="visually-hidden">Как c нами связаться</h2>
-      <section>
-        <h5>#visitSEDONA</h5>
-        <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
-      </section>
-      
-      <div>
-        <ul>
-          <li>
-            <a href="#">Twitter</a>
-            <img src="img" width="17" height="15" alt="Твиттер">
-          </li>
-          <li>
-            <a href="#">Facebook</a>
-            <img src="img" width="12" height="22" alt="Фейсбук">
-          </li>
-          <li>
-            <a href="#">Youtube</a>
-            <img src="img" width="20" height="16" alt=">Ютуб">
-          </li>
-        </ul>
-        <!-- В следующем уроке будет объяснено, как оформить ссылки в виде картинки -->
+        <h2 class="visually-hidden">Как c нами связаться</h2>
+        <div>
+          <a>#VisitSedona</a>
+        </div>
+              
+        <div>
+          <ul>
+            <li>
+              <a href="#">Twitter</a>
+              <img src="img" width="17" height="15" alt="Твиттер">
+            </li>
+
+            <li>
+              <a href="#">Facebook</a>
+              <img src="img" width="12" height="22" alt="Фейсбук">
+            </li>
+
+            <li>
+              <a href="#">Youtube</a>
+              <img src="img" width="20" height="16" alt=">Ютуб">
+            </li>
+          </ul>
+          <!-- В следующем уроке будет объяснено, как оформить ссылки в виде картинки -->
+        </div>
+
+        <div>
+          <p>
+            website by
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img" width="114" height="40" alt=">HTML Academy">
+            </a>
+          </p>
+        </div>
       </div>
-
-
-      
-      <p>
-        website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-        <img src="img" width="114" height="40" alt=">HTML Academy">
-      </p>
-      </div>
-      </footer>
-
-
-
+    </footer>
   </body>
 </html>
