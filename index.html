@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page-body">
     <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>-->
 
-    <header>
-      <nav>
-        <a>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="img/" width="138" height="70" alt="Герб города Седона">
         </a>
      
-       <ul>
+       <ul class="site-navigation">
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
         <li><a href="blank.html">Карта штата</a></li>
@@ -23,7 +26,7 @@
       </nav>
      </header>
 
-     <main>
+     <main class="container"> 
 
       <img src="img/" width="457" height="351" alt="Welcome to the gorgeous Sedona">
       <img src="img/" width="1200" height="509" alt="Вид на каньон">
@@ -39,55 +42,55 @@
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>     
 
-      <section>
+      <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul>
-          <li>
+        <ul class="features-list">
+          <li class="feature-item feature-item-w">
             <h3>Настоящий городок</h3>
             <span>-№1-</span>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             <img src="img/" width="800" height="256" alt="Мотель Седона">
           </li>
 
-          <li>
+          <li class="feature-item">
             <h4>Жильё</h4>
             <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
             <img src="img/" width="75" height="72" alt="Иконка Дом">
           </li>
 
-          <li>
+          <li class="feature-item">
             <h4>Еда</h4>
             <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
             <img src="img/" width="75" height="70" alt="Иконка Бургер">
           </li>
 
-          <li>
+          <li class="feature-item">
             <h4>Сувениры</h4>
             <p>Не только китайского, но и местного<br>
             производства!</p>
             <img src="img/" width="64" height="77" alt="Иконка Сувенир">
           </li>
       
-          <li>
+          <li class="feature-item feature-item-w">
             <h3>Там есть мост Дьявола</h3>
             <span>-№2-</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             <img src="img/" width="800" height="256" alt="Мост Дьявола">
           </li>
 
-          <li>
+          <li class="feature-item feature-item-g">
             <h4>Небольшая площадь</h4>
             <span>-№3-</span>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
 
-          <li>
+          <li class="feature-item feature-item-g">
             <h4>Красивая дорога</h4>
             <span>-№4-</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
-          <li>
+          <li class="feature-item feature-item-g">
             <h4>Мало туристов</h4>
             <span>-№5-</span>
             <p>Большинство едет в гранд каньон и толпится там</p>
@@ -95,48 +98,103 @@
         </ul>
       </section>
 
-      <section>
+      <section class="appointment">
         <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне<p>
+        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне<p>
+        
         <!-- здесь будет форма записи -->
+        
+        <form action="https://echo.htmlacademy.ru" method="post">
+
+          <h3 class="visually-hidden">Поиск гостиницы в Cедоне</h3>
+
+          <button class="button-hotel" type="button">Поиск гостиницы в Седоне</button>
+          
+          <div class="appointment-item">
+            <label for="appointment-date">Дата заезда</label>
+            <input id="appointment-date" type="text" name="appointment-date"
+            value="24 апреля 2017">
+            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+          </div>
+          
+          <div class="appointment-item">
+            <label for="departure-date">Дата выезда</label>
+            <input id="departure-date" type="text" name="departure-date"
+            value="4 июля 2017">
+            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+          </div>
+          
+          <div class="appointment-item">
+            <label for="adult">Взрослые:</label>
+            <input id="adult" type="number" name="adult" min="0" value="2">
+            <button class="button-minus" type="button">-</button>
+            <button class="button-plus" type="button">+</button>
+          </div>
+          
+          <div class="appointment-item">
+            <label for="children">Дети:</label>
+            <input id="children" type="number" name="children" min="0" value="0">
+            <button class="button-minus" type="button">-</button>
+            <button class="button-plus" type="button">+</button>
+          </div>
+          
+          <button type="submit">Найти</button>
+          
+          
+          </form>
       </section>
     
-      <div>
+      <div class="map">
         <img src="img" width="1199" height="594" alt="Карта области">
       </div>
     </main>
 
-  <footer>
-      <div>
-        <h2 class="visually-hidden">Как c нами связаться</h2>
-        <div>
-          <a>#VisitSedona</a>
-        </div>
+  <footer class="page-footer main-footer">
+
+    <div class="container">
+      <h2 class="visually-hidden">Как c нами связаться</h2>
+
+     <section class="footer-contacts">
+       <h5>#visitSEDONA</h5>
+       <a class="footer-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+     </section>
               
-        <div>
+        <div class="footer-social">
           <ul>
             <li>
-              <a href="#">Twitter</a>
-              <img src="img" width="17" height="15" alt="Твиттер">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Twitter</span>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+                  </svg>
+              </a>
             </li>
 
             <li>
-              <a href="#">Facebook</a>
-              <img src="img" width="12" height="22" alt="Фейсбук">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Facebook</span>
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>
+              </a>
             </li>
 
             <li>
-              <a href="#">Youtube</a>
-              <img src="img" width="20" height="16" alt=">Ютуб">
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Youtube</span>  
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+                  </svg>
+            </a>
             </li>
           </ul>
           <!-- В следующем уроке будет объяснено, как оформить ссылки в виде картинки -->
         </div>
 
         <div>
-          <p>
-            website by
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <p class="footer-copyright">  
+            <b>website by</b>
+            <a class="button-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img" width="114" height="40" alt=">HTML Academy">
             </a>
           </p>
