@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="page-body">
+  <body class="page-body inner-page">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -16,11 +16,11 @@
           <img src="img/" width="138" height="70" alt="Герб города Седона">
         </a>
      
-       <ul class="site-navigation">
+       <ul class="site-navigation site-nagigation-inner">
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
         <li><a href="blank.html">Карта штата</a></li>
-        <li><a href="inner.html">Гостиницы</a></li>
+        <li><a class="navigation-current" href="inner.html">Гостиницы</a></li>
       </ul>
       </nav>
      </header>
@@ -82,7 +82,7 @@
     </fieldset>
       <fieldset>
       <legend>Стоимость в сутки (Р):</legend>
-    от 0 <input class="filter-range" type="range" id="cost-per-day" name="cost-per-day" min="0" max="3000" step="1"> до 3000
+    <span class="range-limit">от 0</span><input class="filter-range" type="range" id="cost-per-day" name="cost-per-day" min="0" max="3000" step="1"><span class="range-limit">до 3000</span>
     
     </fieldset>
     
@@ -101,15 +101,15 @@
         <ul class="hotels_sort">
           <li class="sort_type">
             <a href="">По цене</a>
-            <!--<button type="button" disabled>По цене</button>-->
+            <!--<button type="button" class="sort-button" disabled>По цене</button>-->
           </li>
           <li class="sort_type">
             <a href="">По типу</a>
-            <!--<button type="button" disabled>По типу</button>-->
+            <!--<button type="button" class="sort-button" disabled>По типу</button>-->
           </li>
           <li class="sort_type">
             <a href="">По рейтингу</a>
-            <!--<button type="button" disabled>По рейтингу</button>-->
+            <!--<button type="button" class="sort-button" disabled>По рейтингу</button>-->
           </li>
         </ul>
         <div>
