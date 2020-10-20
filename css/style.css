@@ -28,8 +28,8 @@
   /* Global */
 
   body {
-    min-width: 1280px;
-    margin: 0;
+    max-width: 1200px;
+    margin: auto;
     padding: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -37,9 +37,16 @@
     font-weight: 400;
     color: var(--basic-dark);
     text-transform: uppercase;
-    background-color: var(--basic-white);
+    background-color: var(--special-gray-1);
     background-position: top center;
     background-repeat: no-repeat;
+    /* тень на подложку? */
+    box-shadow: 0 0 40px 0 #dbdbdb;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
   }
 
   a {
@@ -49,7 +56,22 @@
   img {
     max-width: 100%;
     height: auto;
+  
   }
+
+  /* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 
   /* Main header */
 
@@ -60,21 +82,41 @@
   /* Main navigation */
 
   .main-navigation {
+    
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
     color: var(--basic-black);
     background-color: transparent;
+    position: relative;
   }
 
+  .main-header-logo {
+    position: absolute;
+    left: 50%;
+
+  }
+
+
+
   .main-navigation-wrapper {
+    
+    grid-template-columns: 1fr min-content;
     background-color: var(--basic-white);
+    margin: 0 auto;
   }
 
   .site-navigation {
     list-style: none;
   }
 
+  .site-navigation {
+    display: flex;
+    justify-content: space-around ;
+  }
+
+
+  
   .site-navigation-current a:not([href]) {
     background-color: var(--basic-white);
   }
@@ -98,10 +140,31 @@
       color: var(--basic-brown)
     }
 
+
+
+    .sedona-info {
+      text-align: center;
+    }
+
+    .info-title {
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: bold;
+      color: var(--basic-black);
+    }
+
+    .info-text {
+      font-size: 14px;
+      line-height: 26px;
+      color: var(--basic-dark);
+    }
+
     /* Features */
+   
 
     .features-list {
       list-style: none;
+     /*  display: grid;*/
     }
     
     .feature-item {
@@ -368,8 +431,18 @@
       background-color: var(--special-footer-background);
       background-position: 0 0;
       background-repeat: repeat;
+/* временно */
+      outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+      
     }
     
+    .main-footer .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 1200px;
+    }
+
     .footer-contacts a {
       font-weight: bold;
       font-size: 21px;
@@ -377,9 +450,16 @@
       color: var(--basic-black);
       background-color: transparent;
     }
+
+    .footer-contacts {
+      outline: 5px solid rgba(0, 255, 255, 0.7);
+      outline-offset: -5px;
+    }
     
     .footer-social {
       text-align: center;
+      outline: 5px solid rgba(0, 255, 0, 0.7);
+    outline-offset: -5px;
     }
     
     .footer-social ul {
@@ -404,6 +484,10 @@
       background-color: var(--special-blue-1);
     }
     
+    .footer-copyright{
+    outline: 5px solid rgba(0, 0, 255, 0.7);
+    outline-offset: -5px;
+  }
     .footer-copyright b {
       font-weight: normal;
       font-size: 14px;
