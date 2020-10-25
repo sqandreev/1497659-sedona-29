@@ -76,10 +76,12 @@
   /* Main header */
 
   .inner-page .main-header {
-    height: 56px;
-    background-color: var(--basic-white);
+    /*height: 56px;
     box-shadow: 0 0 40px 0 #dbdbdb;
-  } /*так можно? */
+    так можно? */
+    background-color: var(--basic-white);
+    
+  } 
 
   /* Main navigation */
 
@@ -95,16 +97,6 @@
   .main-header-logo {
     position: absolute;
     left: 50%;
-
-  }
-
-
-
-  .main-navigation-wrapper {
-    
-    grid-template-columns: 1fr min-content;
-    background-color: var(--basic-white);
-    margin: 0 auto;
   }
 
   .site-navigation {
@@ -113,7 +105,8 @@
 
   .site-navigation {
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-around;
+    margin: 15px 72px 15px;
   }
 
 
@@ -446,6 +439,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       width: 1200px;
+      height: 120px;
     }
 
     .footer-contacts a {
@@ -458,6 +452,9 @@
 
     
     .footer-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
       text-align: center;
     }
     
