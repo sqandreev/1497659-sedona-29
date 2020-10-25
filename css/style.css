@@ -76,13 +76,14 @@
   /* Main header */
 
   .inner-page .main-header {
+    height: 56px;
     background-color: var(--basic-white);
-  }
+    box-shadow: 0 0 40px 0 #dbdbdb;
+  } /*так можно? */
 
   /* Main navigation */
 
   .main-navigation {
-    
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
@@ -164,7 +165,15 @@
 
     .features-list {
       list-style: none;
-     /*  display: grid;*/
+      display: grid;
+      grid-template-columns: 400px 400px 400px;
+      grid-template-rows: 256px 330px 256px 256px;
+    }
+
+    .feature-item-w {
+      grid-column-start: 1;
+      grid-column-end: 4;
+
     }
     
     .feature-item {
@@ -430,11 +439,7 @@
       color: var(--basic-black);
       background-color: var(--special-footer-background);
       background-position: 0 0;
-      background-repeat: repeat;
-/* временно */
-      outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
-      
+      background-repeat: repeat;  
     }
     
     .main-footer .container {
@@ -451,15 +456,9 @@
       background-color: transparent;
     }
 
-    .footer-contacts {
-      outline: 5px solid rgba(0, 255, 255, 0.7);
-      outline-offset: -5px;
-    }
     
     .footer-social {
       text-align: center;
-      outline: 5px solid rgba(0, 255, 0, 0.7);
-    outline-offset: -5px;
     }
     
     .footer-social ul {
@@ -484,10 +483,6 @@
       background-color: var(--special-blue-1);
     }
     
-    .footer-copyright{
-    outline: 5px solid rgba(0, 0, 255, 0.7);
-    outline-offset: -5px;
-  }
     .footer-copyright b {
       font-weight: normal;
       font-size: 14px;
