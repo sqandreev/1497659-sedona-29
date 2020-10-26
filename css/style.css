@@ -75,12 +75,8 @@
 
   /* Main header */
 
-  .inner-page .main-header {
-    /*height: 56px;
-    box-shadow: 0 0 40px 0 #dbdbdb;
-    так можно? */
-    background-color: var(--basic-white);
-    
+  .main-header {
+    background-color: var(--basic-white); 
   } 
 
   /* Main navigation */
@@ -96,17 +92,21 @@
 
   .main-header-logo {
     position: absolute;
-    left: 50%;
+    left: calc(50% - 68px);
+    top: 0;
   }
 
-  .site-navigation {
-    list-style: none;
-  }
-
+  
   .site-navigation {
     display: flex;
     justify-content: space-around;
-    margin: 15px 72px 15px;
+    list-style: none;
+    align-items: center;
+    height: 56px;
+  }
+
+  .navigation-right {
+    margin-right: 180px;
   }
 
 
@@ -134,10 +134,9 @@
       color: var(--basic-brown)
     }
 
-
-
     .sedona-info {
       text-align: center;
+      background-color: var(--basic-white);
     }
 
     .info-title {
@@ -145,14 +144,32 @@
       line-height: 26px;
       font-weight: bold;
       color: var(--basic-black);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 40px;
+
     }
 
     .info-text {
       font-size: 14px;
       line-height: 26px;
       color: var(--basic-dark);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
 
+    .img-container {
+      background-image: url(../img/sedona_background_1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      padding-top: 76px;
+    }
+
+  
     /* Features */
    
 
@@ -451,14 +468,11 @@
     }
 
     
-    .footer-social {
+    .social-container {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       text-align: center;
-    }
-    
-    .footer-social ul {
       list-style: none;
     }
     
