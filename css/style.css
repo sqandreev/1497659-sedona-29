@@ -169,6 +169,53 @@
       padding-top: 76px;
     }
 
+    .img-form {
+      transform: translateY(15%);
+    }
+
+    /* Advantage */
+
+    .advantage {
+      background-size: cover;
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      text-align: center;
+    }
+
+    .advantage__wrapper {
+      background-color: #81b3d2;
+      color: #ffffff;
+    }
+
+    .advantage__wrapper--order {
+      order: 1;
+    }
+
+    .advantage-second {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+    }
+
+    .advantage__image {
+      display: block;
+    }
+
+    .advantage__container--order {
+      order: 1;
+    }
+
+    .featires-list {
+      text-align: center;
+    }
+
+    .features-second {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 250px;
+      align-items: center;
+      text-align: center;
+    }
   
     /* Features */
    
@@ -176,8 +223,11 @@
     .features-list {
       list-style: none;
       display: grid;
-      grid-template-columns: 400px 400px 400px;
-      grid-template-rows: 256px 330px 256px 256px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 330px;
+      align-items: center;
+      text-align: center;
+      background-color: #ffffff;
     }
 
     .feature-item-w {
@@ -243,6 +293,7 @@
 
     .appointment {
       list-style: none;
+      background-color: white;
     }
     
     .appointment {
