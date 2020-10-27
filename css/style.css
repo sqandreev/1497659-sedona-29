@@ -23,6 +23,9 @@
 
     --special-black: rgba(35, 31, 32, 1);
 
+    --special-app-hover: #EBEBEB;
+    --special-app-border: #E5E5E5;
+
   }
   
   /* Global */
@@ -135,6 +138,7 @@
     }
 
     .sedona-info {
+      height: 216px;
       text-align: center;
       background-color: var(--basic-white);
     }
@@ -164,9 +168,12 @@
       background-image: url(../img/sedona_background_1.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
       text-align: center;
       padding-top: 76px;
+    }
+
+    .img-form {
+      transform: translateY(11%);
     }
 
   
@@ -176,16 +183,65 @@
     .features-list {
       list-style: none;
       display: grid;
-      grid-template-columns: 400px 400px 400px;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 256px 330px 256px 256px;
+      grid-template-areas: "town img-town img-town"
+                           "housing food souvenirs"
+                           "img-bridge img-bridge bridge"
+                           "space road tourists";  
     }
 
-    .feature-item-w {
-      grid-column-start: 1;
-      grid-column-end: 4;
+    .f-i-town {
+      grid-area: town;
+  }
+  
+  .img-feature-town {
+     grid-area: img-town;    
+  }
+  
+  .f-i-housing {
+       grid-area: housing; 
+  }
+  
+  .f-i-food {
+       grid-area: food; 
+  }
+  
+  .f-i-souvenirs {
+      grid-area: souvenirs; 
+  }
+  
+  .f-i-bridge {
+      grid-area: bridge; 
+  }
+  
+  .img-feature-bridge {
+      grid-area: img-bridge; 
+  }
+  
+  .f-i-space {
+       grid-area: space; 
+  }
+  
+  .f-i-road {
+      grid-area: road; 
+  }
+  
+  .f-i-tourists {
+      grid-area: tourists; 
+  }
 
-    }
-    
+  .feature-item-wt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-item-wt img {
+    order: -1;
+    padding-top: 60px;
+    padding-left: 40%;
+  }
+
     .feature-item {
       text-align: center;
     }
@@ -220,8 +276,12 @@
     .feature-item-w {
     background-color: var(--basic-blue);
     }
-    
-    
+
+    .feature-item-w span{
+      line-height: 21px;
+      color: var(--basic-white);
+    }
+
     .feature-item h4 {
     font-size: 21px;
     line-height: 21px;
@@ -236,35 +296,70 @@
     }
     
     .feature-item-g {
-    background-color: var(--basic-gray);
+      background-color: var(--basic-gray);
     }
+
+    .feature-item-wt {
+      background-color: var(--basic-white);
+    }
+
+    
 
     /* Appointment */
-
+    
     .appointment {
+      /* временно увеличу высоту */
+      height: 666px;
       list-style: none;
-    }
-    
-    .appointment {
       text-align: center;
+      background-color: var(--basic-white);
     }
-    
-    button-hotel{
-   /* font-size: 21px; 
-    line-height: 26px;
-    font-weight: bold;
-    color: var(--basic-white);
-    background-color: #766357; */
 
+    .appointment h2 {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 24px;
+      margin: auto;
+      padding-top: 68px;
+    }
+
+    .button-hotel {
+    width: 568px;
+    height: 86px;
+    margin-top: 42px;
     font: inherit;
     text-align: center;
+    font-size: 21px;
+    line-height: 26px;
     color: var(--basic-white);
     vertical-align: middle;
     text-transform: uppercase;
     background-color: var(--basic-brown);
     border: none;
-
     }
+
+    .button-hotel:hover,
+    .button-hotel:focus {
+    background-color: var(--special-brown);
+    }
+    
+    .button-hotel:active {
+      /* как задать затемнение цвета текста при нажатии? */
+      background-color: var(--special-brown-1);
+      border: none;
+       /* в браузере появляется черная граница?? */
+    }
+
+    .form-container {
+      width: 568px;
+      height: 395px;
+      padding-left: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+    }
+
     
     .appointment h3 {
       font-size: 21px;
@@ -282,22 +377,83 @@
     
     
     .appointment-item input {
+      
       font-size: 14px;
       line-height: 26px;
       font-weight: bold;
-      background-color: var(--special-l-gray);
+      background-color: var(--special-gray-1);
       border: none;
     }
+
+    .input-date {
+      width: 346px;
+      height: 38px;
+    }
+
+    .input-count {
+      width: 114px;
+      height: 38px;
+    }
+
+
     
     .appointment-item input:hover{
-    background-color:#EBEBEB;
+    background-color: var(--special-app-hover);
     }
     
     .appointment-item input:focus{
     background-color: var(--basic-white);
-    border: 2px solid #E5E5E5;
+    border: 2px solid var(--special-app-border);
     }
     
+    .button-submit {
+      width: 458px;
+      height: 58px;
+      text-align: center;
+      font-size: 21px;
+      line-height: 26px;
+      color: var(--basic-white);
+      vertical-align: middle;
+      text-transform: uppercase;
+      background-color: var(--basic-blue);
+      border: none;
+      margin-left: 55px;
+      }
+  
+      .button-submit:hover,
+      .button-submit:focus {
+      background-color: var(--special-blue);
+      }
+      
+      .button-submit:active {
+        /* как задать затемнение цвета текста при нажатии? */
+        background-color: var(--special-blue-1);
+      }
+
+
+
+      .filters {
+      background-image: url(../img/background_blur.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      }
+
+      .infrastructure {
+        width: 25%
+      }
+
+      .type_l {
+        width: 25%
+      }
+
+      .cost_per_day {
+        width: 50%
+      }
+
+
     /* Filters */
 
   
@@ -439,6 +595,10 @@
       background-color: var(--special-gray-1);
     }
 
+    .map {
+      position: relative;
+    }
+
 
      /* Main footer */
 
@@ -447,16 +607,17 @@
       font-size: 21px;
       line-height: 26px;
       color: var(--basic-black);
-      background-color: var(--special-footer-background);
-      background-position: 0 0;
-      background-repeat: repeat;  
+      position: relative;
     }
     
     .main-footer .container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      width: 1200px;
+      width: 100%;
       height: 120px;
+      background-color: var(--special-footer-background); 
+      position: absolute;
+      bottom: 0:
     }
 
     .footer-contacts a {
@@ -471,7 +632,9 @@
     .social-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 36px;
       text-align: center;
       list-style: none;
     }
@@ -479,12 +642,16 @@
     /* Social button */
 
     .social-button {
-      color: inherit;
-    }
-    .social-button {
-      background-color: var(--basic-blue)
+      color: inherit; 
     }
     
+    .social-button {
+      background-color: var(--basic-blue);  
+      width: 46px;
+      height: 48px;
+      text-align: center;
+    }
+
     .social-button:hover,
     .social-button:focus {
     background-color: var(--special-blue);
@@ -507,6 +674,5 @@
     }
 
     .footer-copyright .button-copyright:active {
-
     color: var(--basic-gray)  
     }
