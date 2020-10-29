@@ -309,10 +309,11 @@
     
     .appointment {
       /* временно увеличу высоту */
-      height: 666px;
+      height: 291px;
       list-style: none;
       text-align: center;
       background-color: var(--basic-white);
+      position: relative;
     }
 
     .appointment h2 {
@@ -322,6 +323,8 @@
       margin: auto;
       padding-top: 68px;
     }
+
+
 
     .button-hotel {
     width: 568px;
@@ -350,17 +353,26 @@
        /* в браузере появляется черная граница?? */
     }
 
-    .form-container {
+    .form {
+      position: absolute;
+      top: -152px;
       width: 568px;
       height: 395px;
-      padding-left: 25%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: stretch;
+      background-color: var(--basic-white);
     }
 
-    
+    .app-container {
+      display: flex;
+    }
+
+    .appointment-item .input-count {
+      width: 30px;
+    }
+   
     .appointment h3 {
       font-size: 21px;
       line-height: 26px;
@@ -597,6 +609,8 @@
 
     .map {
       position: relative;
+      display: flex;
+      justify-content: center;
     }
 
 
@@ -607,7 +621,6 @@
       font-size: 21px;
       line-height: 26px;
       color: var(--basic-black);
-      position: relative;
     }
     
     .main-footer .container {
