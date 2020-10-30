@@ -45,7 +45,6 @@
         <p class= "info-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>     
 
-      <div class="features">
         <div class="advantage">
           <div class="advantage__wrapper">
             <h3 class="advantage__title">Настоящий городок</h3>
@@ -73,6 +72,47 @@
             <h4 class="features__title">Сувениры</h4>
             <p class="features__description">Не только китайского, но и местного<br>
             производства!</p>
+      <section class="features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features-list">
+          <li class="feature-item feature-item-w f-i-town">
+            <div></div>
+              <h3>Настоящий городок</h3>
+              <span class="number-wt">-№1-</span>
+              <p>Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
+            </div>
+          </li>
+
+          <div class="img-feature-town">
+            <img src="img/motel_sedona.jpg" width="800" height="256" alt="Мотель Седона">
+          </div>
+
+
+          <li class="feature-item feature-item-wt f-i-housing">
+            <h4>Жильё</h4>
+            <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
+            <img src="img/icon_house.svg" width="75" height="72" alt="Иконка Дом">
+          </li>
+
+          <li class="feature-item feature-item-wt f-i-food">
+            <h4>Еда</h4>
+            <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+            <img src="img/icon_burger.svg" width="75" height="70" alt="Иконка Бургер">
+          </li>
+
+          <li class="feature-item feature-item-wt f-i-souvenirs">
+            <h4>Сувениры</h4>
+            <p>Не только китайского, но и местного<br>
+            производства!</p>
+            <img src="img/icon_souvenir.svg" width="64" height="77" alt="Иконка Сувенир">
+          </li>
+      
+          <li class="feature-item feature-item-w f-i-bridge">
+            <div>
+            <h3>Там есть мост Дьявола</h3>
+            <span class="number-wt">-№2-</span>
+            <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+            </div>
           </li>
         </ul>
 
@@ -102,6 +142,26 @@
             <h4 class="features__title">Мало туристов</h4>
             <span class="features__text">-№5-</span>
             <p class="features__description"><p>Большинство едет в гранд каньон <br> и толпится там</p>
+          <div class="img-feature-bridge">
+            <img src="img/sedona_devils_bridge.jpg" width="800" height="256" alt="Мост Дьявола">
+            </div>
+
+          <li class="feature-item feature-item-g f-i-space">
+            <h4>Небольшая площадь</h4>
+            <span>-№3-</span>
+            <p>Все достопримечательности<br> находятся очень близко</p>
+          </li>
+
+          <li class="feature-item feature-item-g f-i-road">
+            <h4>Красивая дорога</h4>
+            <span>-№4-</span>
+            <p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+          </li>
+
+          <li class="feature-item feature-item-g f-i-tourists">
+            <h4>Мало туристов</h4>
+            <span>-№5-</span>
+            <p>Большинство едет в гранд каньон<br> и толпится там</p>
           </li>
         </ul>
 
@@ -109,91 +169,98 @@
 
       <section class="appointment">
         <h2>Заинтересовались?</h2>
-        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне<p>
+        <p class="appointment-info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне<p>
         
         <!-- здесь будет форма записи -->
         
-        <form action="https://echo.htmlacademy.ru" method="post">
-
-          <h3 class="visually-hidden">Поиск гостиницы в Cедоне</h3>
-
-          <button class="button-hotel" type="button">Поиск гостиницы в Седоне</button>
-          
-          <div class="appointment-item">
-            <label for="appointment-date">Дата заезда</label>
-            <input id="appointment-date" type="text" name="appointment-date"
-            value="24 апреля 2017">
-            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
-          </div>
-          
-          <div class="appointment-item">
-            <label for="departure-date">Дата выезда</label>
-            <input id="departure-date" type="text" name="departure-date"
-            value="4 июля 2017">
-            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
-          </div>
-          
-          <div class="appointment-item">
-            <label for="adult">Взрослые:</label>
-            <input id="adult" type="number" name="adult" min="0" value="2">
-            <button class="button-minus" type="button">-</button>
-            <button class="button-plus" type="button">+</button>
-          </div>
-          
-          <div class="appointment-item">
-            <label for="children">Дети:</label>
-            <input id="children" type="number" name="children" min="0" value="0">
-            <button class="button-minus" type="button">-</button>
-            <button class="button-plus" type="button">+</button>
-          </div>
-          
-          <button type="submit">Найти</button>
-          
-          
-          </form>
       </section>
     
       <div class="map">
-        <img src="img/map.jpg" width="1199" height="594" alt="Карта области">
+        
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+
+          <div class="form-container">
+  
+            <h3 class="visually-hidden">Поиск гостиницы в Cедоне</h3>
+  
+            <button class="button-hotel" type="button">Поиск гостиницы в Седоне</button>
+            
+            <div class="appointment-item">
+              <label for="appointment-date">Дата заезда:</label>
+              <input class="input-date" id="appointment-date" type="text" name="appointment-date"
+              value="24 апреля 2017">
+              <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+            </div>
+            
+            <div class="appointment-item">
+              <label for="departure-date">Дата выезда:</label>
+              <input class="input-date" id="departure-date" type="text" name="departure-date"
+              value="4 июля 2017">
+              <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+            </div>
+            
+            <div class="app-container">
+
+            <div class="appointment-item">
+              <label for="adult">Взрослые:</label>
+              <button class="button-minus" type="button">-</button>
+              <input class="input-count" id="adult" type="number" name="adult" min="0" value="2">
+              <button class="button-plus" type="button">+</button>
+            </div>
+            
+            <div class="appointment-item">
+              <label for="children">Дети:</label>
+              <button class="button-minus" type="button">-</button>
+              <input class="input-count" id="children" type="number" name="children" min="0" value="0">
+              <button class="button-plus" type="button">+</button>
+            </div>
+
+          </div>
+            
+            <button class="button-submit" type="submit">Найти</button>
+            
+          </div>
+  
+            </form>
+
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565771201!2d-111.83015789012016!3d34.85444381533089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1604000163968!5m2!1sru!2sru" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
       </div>
     </main> 
+
   
   <footer class="page-footer main-footer">
 
     <div class="container">
-      <h2 class="visually-hidden">Как c нами связаться</h2>
+      
 
      <section class="footer-contacts">
-       <h5>#visitSEDONA</h5>
+      <h2 class="visually-hidden">Как c нами связаться</h2>
+       <span>#visitSEDONA</span>
        <a class="footer-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
      </section>
               
         <div class="footer-social">
           <ul class="social-container">
-            <li>
+            <li class="social-container-item">
               <a class="social-button" href="#">
                 <span class="visually-hidden">Twitter</span>
-                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+                <img class="social-logo" src="img/twitter_logo.svg" width="16,98" height="15,01" alt=">Twitter">
                   </svg>
               </a>
             </li>
 
-            <li>
+            <li class="social-container-item"> 
               <a class="social-button" href="#">
                 <span class="visually-hidden">Facebook</span>
-                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
-                  </svg>
+                <img class="social-logo" src="img/Facebook_logo.svg" width="12" height="22" alt=">Youtube">
               </a>
             </li>
 
-            <li>
+            <li class="social-container-item">
               <a class="social-button" href="#">
                 <span class="visually-hidden">Youtube</span>  
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
-                  </svg>
+                <img class="social-logo" src="img/youtube_logo.svg" width="20" height="16" alt=">Youtube">
             </a>
             </li>
           </ul>

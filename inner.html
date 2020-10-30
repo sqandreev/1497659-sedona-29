@@ -27,7 +27,7 @@
 
      <main class=" inner-page container">
 
-      <img src="img/background_blur.jpg" width="1200" height="217" alt="Размытое нечто">
+      <!--<img src="img/background_blur.jpg" width="1200" height="217" alt="Размытое нечто">-->
       
       <h1 class="visually-hidden">Параметры поиска</h1>
       
@@ -36,6 +36,7 @@
       <h2 class="visually-hidden">Форма с выбором оказываемых услуг</h2>
 
       <form class="filter" action="https://echo.htmlacademy.ru" method="GET">
+        <div class="infrastructure">
         <fieldset>
           <legend>Инфраструктура:</legend>
       <ul>
@@ -57,6 +58,8 @@
         </li>
     </ul>
       </fieldset>
+    </div>
+    <div class="type_l">
         <fieldset>
           <legend>Тип жилья:</legend>
       <ul>
@@ -80,6 +83,8 @@
         </li>
       </ul>
     </fieldset>
+  </div>
+  <div class="cost_per_day">
       <fieldset>
       <legend>Стоимость в сутки (Р):</legend>
     <span class="range-limit">от 0</span><input class="filter-range" type="range" id="cost-per-day" name="cost-per-day" min="0" max="3000" step="1"><span class="range-limit">до 3000</span>
@@ -87,7 +92,7 @@
     </fieldset>
     
     <button type="submit" class="filter-button">Показать</button>
-    
+  </div> 
     
     </form>
     </section>
